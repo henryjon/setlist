@@ -1,7 +1,7 @@
-An algorithm I ran for my friends wedding to compute the optimal setlist, i.e. the setlist with the minimal number of musician changeovers.
+An algorithm I ran for my friends wedding to compute the optimal setlist, i.e. the setlist with the minimal number of musician changeovers. I used the [[https://en.wikipedia.org/wiki/Held%E2%80%93Karp_algorithm][Held-Karp algorithm]].
 
 * Results
-The algorithm took around 7 seconds. And this time roughly doubles for every song we add. It seems I was very lucky with the number of songs chosen. Had we added like five more songs, this would have been intractable. Of course, when the cost is zero, the players can reshuffle their songs to their hearts desire, all within their miniset. 
+The algorithm took around 7 seconds. And this time roughly doubles for every song we add (complexity is $O(2^n n^2)$). It seems I was very lucky with the number of songs chosen. Had we added like five more songs, this would have been intractable! Of course, when the cost is zero, the players can reshuffle their songs to their hearts' desire, all within their miniset. 
 
 | Songs                          | Vocals | Keys | Bass | Guitar | Drums | Cost |
 |--------------------------------+--------+------+------+--------+-------+------|
@@ -34,4 +34,7 @@ The algorithm took around 7 seconds. And this time roughly doubles for every son
 | Total                          |        |      |      |        |       |   24 |
 
 * Concluding thoughts
-The poor trumpet player was not considered in the algorithm. They play on the song tracks containing "*", and this information was simply ignored.
+- The poor trumpet player was not considered in the algorithm. They play on the song tracks containing "*", and this information was simply ignored.
+- I added no cost for a musician to stay on stage, but change instruments
+- I'm reasonably happy with the way the key changes have organised themselves. Except, of course, the turn of Eb, Em, Eb, which regrettably occurs around the maximal changeover
+- This probably isn't a complete coincidence
