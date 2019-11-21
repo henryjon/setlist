@@ -1,0 +1,37 @@
+An algorithm I ran for my friends wedding to compute the optimal setlist, i.e. the setlist with the minimal number of musician changeovers.
+
+* Results
+The algorithm took around 7 seconds. And this time roughly doubles for every song we add. It seems I was very lucky with the number of songs chosen. Of course, when the cost is zero, the players can reshuffle their songs to their hearts desire, all within their miniset. 
+
+| Songs                          | Vocals | Keys | Bass | Guitar | Drums | Cost |
+|--------------------------------+--------+------+------+--------+-------+------|
+| First dance                    | JI     | BS   |      |        |       |    0 |
+| Let's Stay Together (F)(*)     | JI     | BS   | DJ   | GW     | TL    |    3 |
+| Forget You (C)                 | JI     | BS   | DJ   | GW     | TL    |    0 |
+| Crazy in Love (Dm)*            | JI     | JO   | DJ   | GW     | TL    |    1 |
+| Girls Just Wanna Have Fun (E)* | JI     | DA   | DJ   | GW     | TL    |    1 |
+| Backstreets Back (Bbm)         | JI     | DA   | DJ   | GW     | TL    |    0 |
+| Master Blaster (Cm)*           | HN     | DA   | DJ   | GW     | TL    |    1 |
+| Lady Marmalade (Gm)            | JI     | JW   | DJ   | GW     | TL    |    2 |
+| Isn't She Lovely (E)           | JI     | JW   | DJ   | GW     | TL    |    0 |
+| Easy Lover (Fm)                | JI     | JW   | DJ   | GW     | AI    |    1 |
+| American Boy (E)               | JI     | JO   | GF   | DJ     | JW    |    2 |
+| Señorita (Gb)*                 | JI     | DA   | GF   | GW     | JW    |    2 |
+| Somebody Else's Guy (Abm)*     | HN     | JW   | GF   | GW     | AI    |    2 |
+| Runaway Baby (Eb)              | HN     | JO   | DH   | GW     | JW    |    2 |
+| Superstition (Em)*             | JI     | BS   | DH   | JS     | JW    |    3 |
+| Valerie (Eb)*                  | JI     | BS   | DH   | JS     | AI    |    1 |
+| Respect (C)*                   | JI     | BS   | DH   | JS     | AI    |    0 |
+| Play That Funky Music (Em)*    | JI     | BS   | DH   | JS     | AI    |    0 |
+| I Got You (I Feel Good)*       | JI     | BS   | DH   | JS     | AI    |    0 |
+| Ain't Nobody (Ebm)             | JI     | BS   | DH   | JS     | AI    |    0 |
+| Treasure (Ab)                  | JI     | JO   | DH   | JS     | AI    |    1 |
+| Locked Out Of Heaven (Dm)      | JI     | JO   | DH   | JS     | AI    |    0 |
+| Uptown Funk (D)*               | JI     | DA   | DH   | JS     | AI    |    1 |
+| Good Times (Em)                | JI     | DA   | DH   | JS     | TL    |    1 |
+| End                            |        |      |      |        |       |    0 |
+|                                |        |      |      |        |       |      |
+| Total                          |        |      |      |        |       |   24 |
+
+* Concluding thoughts
+The poor trumpet player was not considered in the algorithm. They play on the song tracks containing "*", and this information was simply ignored.
