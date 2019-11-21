@@ -28,15 +28,12 @@ def cost(v1, v2):
     s1 = set(s1) - {""}
     s2 = set(s2) - {""}
 
-    if v1 == v_start:
-        # Charge loads if Heidi and Joe are playing after the first dance
-        if "JW" in s2 or "HN" in s2:
-            return 100
-
-    if v2 == v_end:
-        # Charge a little if Heidi or Joe are playing in the last song
-        if "JW" in s1 or "HN" in s1:
-            return 100
+    # Charge loads if Heidi and Joe are playing after the first dance, or in
+    # the last song
+    if v1 == v_start and ("JW" in s2 or "HN" in s2):
+        return 100
+    if v2 == v_end("JW" in s1 or "HN" in s1):
+        return 100
 
     return len(s2 - s1)
 
