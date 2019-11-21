@@ -1,7 +1,7 @@
 An algorithm I ran for my friends wedding to compute the optimal setlist, i.e. the setlist with the minimal number of musician changeovers.
 
 * Results
-The algorithm took around 7 seconds. And this time roughly doubles for every song we add. It seems I was very lucky with the number of songs chosen. Of course, when the cost is zero, the players can reshuffle their songs to their hearts desire, all within their miniset. 
+The algorithm took around 7 seconds. And this time roughly doubles for every song we add. It seems I was very lucky with the number of songs chosen. Had we added like five more songs, this would have been intractable. Of course, when the cost is zero, the players can reshuffle their songs to their hearts desire, all within their miniset. 
 
 | Songs                          | Vocals | Keys | Bass | Guitar | Drums | Cost |
 |--------------------------------+--------+------+------+--------+-------+------|

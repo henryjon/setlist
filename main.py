@@ -1,7 +1,6 @@
 import time
 import pandas as pd
 
-# Had we added like five more songs, this would have been intractable
 
 with open("data.csv", "r") as f:
     headers = f.readline().replace("\n", "").split(",")
