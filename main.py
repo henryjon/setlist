@@ -32,7 +32,7 @@ def cost(v1, v2):
     # the last song
     if v1 == v_start and ("JW" in s2 or "HN" in s2):
         return 100
-    if v2 == v_end("JW" in s1 or "HN" in s1):
+    if v2 == v_end and ("JW" in s1 or "HN" in s1):
         return 100
 
     return len(s2 - s1)
